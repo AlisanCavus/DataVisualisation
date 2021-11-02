@@ -55,3 +55,4 @@ window.configuration = {
                 // "NO":"#ABB7B7"
         }
 }
+
