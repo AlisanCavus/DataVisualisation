@@ -260,5 +260,3 @@ var _paq = _paq || [];
   };
 
 })(window, document);
-
-
