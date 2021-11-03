@@ -1,17 +1,39 @@
 // creating canvas element
-let table1 = $("#table1");
-let table2 = $("#table2");
+let tableCrimes = $("#table1");
+let tableHomicides = $("#table2");
 let newCanvas1 = $("<canvas/>" , {'id': 'crimes', 'class':'canv'});
-let newCanvas2 = $("<canvas/>" , {'id': 'homicide', 'class':'canv'});
+let newCanvas2 = $("<canvas/>" , {'id': 'homicides', 'class':'canv'});
 // console.log("test1");
-newCanvas1.insertBefore(table1);
-newCanvas2.insertBefore(table2);
+newCanvas1.insertBefore(tableCrimes);
+newCanvas2.insertBefore(tableHomicides);
 
 // canvas elements created just above tables
 
-//create charts 
-let myCharts = $(".crimes").getContext("2d");
+//create a function that will call crimes chart
+function createChart(labels, values, chartTitle) {  
+  var crtCrimes =$("#crimes").getContext("2d");
+  var chartCrimes = new chart(crtCrimes, {  
+    type: "bar",
+    data: { 
 
-let crimesChart = new Chart(myCharts);
-let homicideChart = new Chart(myCharts);
+    },
+    options: {
+      responsive : true,
+      maintainAspectRation: false,
+    }
+  });
+  return chartCrimes;
+};
+
+// convert table data in object
+var crimesData = $("#table1").tableToJSON({
+  ignoreColumns: [0],
+  ignoreRows:[1],
+  headings: false
+});
+console.log(crimesData);
+  
+
+
+
 
