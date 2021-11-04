@@ -1,39 +1,57 @@
 // creating canvas element
 let tableCrimes = $("#table1");
 let tableHomicides = $("#table2");
-let newCanvas1 = $("<canvas/>" , {'id': 'crimes', 'class':'canv'});
-let newCanvas2 = $("<canvas/>" , {'id': 'homicides', 'class':'canv'});
+let newCanvas1 = $("<canvas/>", { id: "crimes", class: "canv" });
+let newCanvas2 = $("<canvas/>", { id: "homicides", class: "canv" });
 // console.log("test1");
 newCanvas1.insertBefore(tableCrimes);
 newCanvas2.insertBefore(tableHomicides);
 
-// canvas elements created just above tables
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:8080/homicide.json";
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+xmlhttp.onreadystatechange = function () {
+    if(this.readyState ==4 && this.status == 200) { 
+        var datasCrime = JSON.parse(this.responseText);
+        console.log(datasCrime);
+    }
+}
 
-//create a function that will call crimes chart
-function createChart(labels, values, chartTitle) {  
-  var crtCrimes =$("#crimes").getContext("2d");
-  var chartCrimes = new chart(crtCrimes, {  
-    type: "bar",
-    data: { 
 
+const ctx = $("#homicides");
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
     },
     options: {
-      responsive : true,
-      maintainAspectRation: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
     }
-  });
-  return chartCrimes;
-};
-
-// convert table data in object
-var crimesData = $("#table1").tableToJSON({
-  ignoreColumns: [0],
-  ignoreRows:[1],
-  headings: false
 });
-console.log(crimesData);
-  
-
-
-
 
