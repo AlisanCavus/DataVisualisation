@@ -7,51 +7,716 @@ let newCanvas2 = $("<canvas/>", { id: "homicides", class: "canv" });
 newCanvas1.insertBefore(tableCrimes);
 newCanvas2.insertBefore(tableHomicides);
 
-var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:8080/homicide.json";
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-xmlhttp.onreadystatechange = function () {
-    if(this.readyState ==4 && this.status == 200) { 
-        var datasCrime = JSON.parse(this.responseText);
-        console.log(datasCrime);
-    }
-}
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let arrayCrimes = JSON.parse(xhttp.responseText);
+    console.log(arrayCrimes[0]);
 
-
-const ctx = $("#homicides");
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+    const ctx = $("#crimes");
+    const myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+        ],
+        datasets: [
+          {
+            label: arrayCrimes[0].country,
+            data: [
+              arrayCrimes[0].y2002,
+              arrayCrimes[0].y2003,
+              arrayCrimes[0].y2004,
+              arrayCrimes[0].y2005,
+              arrayCrimes[0].y2006,
+              arrayCrimes[0].y2007,
+              arrayCrimes[0].y2008,
+              arrayCrimes[0].y2009,
+              arrayCrimes[0].y2010,
+              arrayCrimes[0].y2011,
+              arrayCrimes[0].y2012,
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(39, 140, 201, 0.7)"
+          },
+          {
+            label: arrayCrimes[1].country,
+            data: [
+              arrayCrimes[1].y2002,
+              arrayCrimes[1].y2003,
+              arrayCrimes[1].y2004,
+              arrayCrimes[1].y2005,
+              arrayCrimes[1].y2006,
+              arrayCrimes[1].y2007,
+              arrayCrimes[1].y2008,
+              arrayCrimes[1].y2009,
+              arrayCrimes[1].y2010,
+              arrayCrimes[1].y2011,
+              arrayCrimes[1].y2012,
             ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+            borderColor: "red",
+            borderWidth: 2,
+            backgroundColor:"rgba(226, 57, 16, 0.1)"
+          },
+          {
+            label: arrayCrimes[2].country,
+            data: [
+              arrayCrimes[2].y2002,
+              arrayCrimes[2].y2003,
+              arrayCrimes[2].y2004,
+              arrayCrimes[2].y2005,
+              arrayCrimes[2].y2006,
+              arrayCrimes[2].y2007,
+              arrayCrimes[2].y2008,
+              arrayCrimes[2].y2009,
+              arrayCrimes[2].y2010,
+              arrayCrimes[2].y2011,
+              arrayCrimes[2].y2012,
+            ],
+            borderColor: "yellow",
+            borderWidth: 2,
+            backgroundColor:"rgba(121, 208, 151, 0.1)"
+          },
+          {
+            label: arrayCrimes[3].country,
+            data: [
+              arrayCrimes[3].y2002,
+              arrayCrimes[3].y2003,
+              arrayCrimes[3].y2004,
+              arrayCrimes[3].y2005,
+              arrayCrimes[3].y2006,
+              arrayCrimes[3].y2007,
+              arrayCrimes[3].y2008,
+              arrayCrimes[3].y2009,
+              arrayCrimes[3].y2010,
+              arrayCrimes[3].y2011,
+              arrayCrimes[3].y2012,
+            ],
+            borderColor: "green",
+            borderWidth: 2,
+            backgroundColor:"rgba(141, 31, 161, 0.9)"
+          },
+          {
+            label: arrayCrimes[4].country,
+            data: [
+              arrayCrimes[4].y2002,
+              arrayCrimes[4].y2003,
+              arrayCrimes[4].y2004,
+              arrayCrimes[4].y2005,
+              arrayCrimes[4].y2006,
+              arrayCrimes[4].y2007,
+              arrayCrimes[4].y2008,
+              arrayCrimes[4].y2009,
+              arrayCrimes[4].y2010,
+              arrayCrimes[4].y2011,
+              arrayCrimes[4].y2012,
+            ],
+            borderColor: "purple",
+            borderWidth: 2,
+            backgroundColor:"rgba(206, 45, 113, 0.6)"
+          },
+          {
+            label: arrayCrimes[5].country,
+            data: [
+              arrayCrimes[5].y2002,
+              arrayCrimes[5].y2003,
+              arrayCrimes[5].y2004,
+              arrayCrimes[5].y2005,
+              arrayCrimes[5].y2006,
+              arrayCrimes[5].y2007,
+              arrayCrimes[5].y2008,
+              arrayCrimes[5].y2009,
+              arrayCrimes[5].y2010,
+              arrayCrimes[5].y2011,
+              arrayCrimes[5].y2012,
+            ],
+            borderColor: "aqua",
+            borderWidth: 2,
+            backgroundColor:"rgba(14, 97, 249, 0.7)"
+          },
+          {
+            label: arrayCrimes[6].country,
+            data: [
+              arrayCrimes[6].y2002,
+              arrayCrimes[6].y2003,
+              arrayCrimes[6].y2004,
+              arrayCrimes[6].y2005,
+              arrayCrimes[6].y2006,
+              arrayCrimes[6].y2007,
+              arrayCrimes[6].y2008,
+              arrayCrimes[6].y2009,
+              arrayCrimes[6].y2010,
+              arrayCrimes[6].y2011,
+              arrayCrimes[6].y2012,
+            ],
+            borderColor: "orange",
+            borderWidth: 2,
+            backgroundColor:"rgba(54, 45, 12, 0.4)"
+          },
+          {
+            label: arrayCrimes[7].country,
+            data: [
+              arrayCrimes[7].y2002,
+              arrayCrimes[7].y2003,
+              arrayCrimes[7].y2004,
+              arrayCrimes[7].y2005,
+              arrayCrimes[7].y2006,
+              arrayCrimes[7].y2007,
+              arrayCrimes[7].y2008,
+              arrayCrimes[7].y2009,
+              arrayCrimes[7].y2010,
+              arrayCrimes[7].y2011,
+              arrayCrimes[7].y2012,
+            ],
+            borderColor: "brown",
+            borderWidth: 2,
+            backgroundColor:"rgba(46, 170, 82, 0.5)"
+          },
+          {
+            label: arrayCrimes[8].country,
+            data: [
+              arrayCrimes[8].y2002,
+              arrayCrimes[8].y2003,
+              arrayCrimes[8].y2004,
+              arrayCrimes[8].y2005,
+              arrayCrimes[8].y2006,
+              arrayCrimes[8].y2007,
+              arrayCrimes[8].y2008,
+              arrayCrimes[8].y2009,
+              arrayCrimes[8].y2010,
+              arrayCrimes[8].y2011,
+              arrayCrimes[8].y2012,
+            ],
+            borderColor: "gray",
+            borderWidth: 2,
+            backgroundColor:"brgba(72, 27, 139, 0.9)"
+          },
+          {
+            label: arrayCrimes[9].country,
+            data: [
+              arrayCrimes[9].y2002,
+              arrayCrimes[9].y2003,
+              arrayCrimes[9].y2004,
+              arrayCrimes[9].y2005,
+              arrayCrimes[9].y2006,
+              arrayCrimes[9].y2007,
+              arrayCrimes[9].y2008,
+              arrayCrimes[9].y2009,
+              arrayCrimes[9].y2010,
+              arrayCrimes[9].y2011,
+              arrayCrimes[9].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(175, 94, 55, 0.9)"
+          },
+          {
+            label: arrayCrimes[10].country,
+            data: [
+              arrayCrimes[10].y2002,
+              arrayCrimes[10].y2003,
+              arrayCrimes[10].y2004,
+              arrayCrimes[10].y2005,
+              arrayCrimes[10].y2006,
+              arrayCrimes[10].y2007,
+              arrayCrimes[10].y2008,
+              arrayCrimes[10].y2009,
+              arrayCrimes[10].y2010,
+              arrayCrimes[10].y2011,
+              arrayCrimes[10].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(2, 122, 142, 0.2)"
+          },
+          {
+            label: arrayCrimes[11].country,
+            data: [
+              arrayCrimes[11].y2002,
+              arrayCrimes[11].y2003,
+              arrayCrimes[11].y2004,
+              arrayCrimes[11].y2005,
+              arrayCrimes[11].y2006,
+              arrayCrimes[11].y2007,
+              arrayCrimes[11].y2008,
+              arrayCrimes[11].y2009,
+              arrayCrimes[11].y2010,
+              arrayCrimes[11].y2011,
+              arrayCrimes[11].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(125, 144, 74, 1)"
+          },
+          {
+            label: arrayCrimes[12].country,
+            data: [
+              arrayCrimes[12].y2002,
+              arrayCrimes[12].y2003,
+              arrayCrimes[12].y2004,
+              arrayCrimes[12].y2005,
+              arrayCrimes[12].y2006,
+              arrayCrimes[12].y2007,
+              arrayCrimes[12].y2008,
+              arrayCrimes[12].y2009,
+              arrayCrimes[12].y2010,
+              arrayCrimes[12].y2011,
+              arrayCrimes[12].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(250, 211, 219, 1)"
+          },
+          {
+            label: arrayCrimes[13].country,
+            data: [
+              arrayCrimes[13].y2002,
+              arrayCrimes[13].y2003,
+              arrayCrimes[13].y2004,
+              arrayCrimes[13].y2005,
+              arrayCrimes[13].y2006,
+              arrayCrimes[13].y2007,
+              arrayCrimes[13].y2008,
+              arrayCrimes[13].y2009,
+              arrayCrimes[13].y2010,
+              arrayCrimes[13].y2011,
+              arrayCrimes[13].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(114, 65, 73, 0.5)"
+          },
+          {
+            label: arrayCrimes[14].country,
+            data: [
+              arrayCrimes[14].y2002,
+              arrayCrimes[14].y2003,
+              arrayCrimes[14].y2004,
+              arrayCrimes[14].y2005,
+              arrayCrimes[14].y2006,
+              arrayCrimes[14].y2007,
+              arrayCrimes[14].y2008,
+              arrayCrimes[14].y2009,
+              arrayCrimes[14].y2010,
+              arrayCrimes[14].y2011,
+              arrayCrimes[14].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(158, 171, 93, 0.7)"
+          },
+          {
+            label: arrayCrimes[15].country,
+            data: [
+              arrayCrimes[15].y2002,
+              arrayCrimes[15].y2003,
+              arrayCrimes[15].y2004,
+              arrayCrimes[15].y2005,
+              arrayCrimes[15].y2006,
+              arrayCrimes[15].y2007,
+              arrayCrimes[15].y2008,
+              arrayCrimes[15].y2009,
+              arrayCrimes[15].y2010,
+              arrayCrimes[15].y2011,
+              arrayCrimes[15].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(110, 214, 74, 0.6)"
+          },
+          {
+            label: arrayCrimes[16].country,
+            data: [
+              arrayCrimes[16].y2002,
+              arrayCrimes[16].y2003,
+              arrayCrimes[16].y2004,
+              arrayCrimes[16].y2005,
+              arrayCrimes[16].y2006,
+              arrayCrimes[16].y2007,
+              arrayCrimes[16].y2008,
+              arrayCrimes[16].y2009,
+              arrayCrimes[16].y2010,
+              arrayCrimes[16].y2011,
+              arrayCrimes[16].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(160, 40, 72, 1)"
+          },
+          {
+            label: arrayCrimes[17].country,
+            data: [
+              arrayCrimes[17].y2002,
+              arrayCrimes[17].y2003,
+              arrayCrimes[17].y2004,
+              arrayCrimes[17].y2005,
+              arrayCrimes[17].y2006,
+              arrayCrimes[17].y2007,
+              arrayCrimes[17].y2008,
+              arrayCrimes[17].y2009,
+              arrayCrimes[17].y2010,
+              arrayCrimes[17].y2011,
+              arrayCrimes[17].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(189, 57, 187, 0.2)"
+          },
+          {
+            label: arrayCrimes[18].country,
+            data: [
+              arrayCrimes[18].y2002,
+              arrayCrimes[18].y2003,
+              arrayCrimes[18].y2004,
+              arrayCrimes[18].y2005,
+              arrayCrimes[18].y2006,
+              arrayCrimes[18].y2007,
+              arrayCrimes[18].y2008,
+              arrayCrimes[18].y2009,
+              arrayCrimes[18].y2010,
+              arrayCrimes[18].y2011,
+              arrayCrimes[18].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(34, 225, 62, 0.9)"
+          },
+          {
+            label: arrayCrimes[19].country,
+            data: [
+              arrayCrimes[19].y2002,
+              arrayCrimes[19].y2003,
+              arrayCrimes[19].y2004,
+              arrayCrimes[19].y2005,
+              arrayCrimes[19].y2006,
+              arrayCrimes[19].y2007,
+              arrayCrimes[19].y2008,
+              arrayCrimes[19].y2009,
+              arrayCrimes[19].y2010,
+              arrayCrimes[19].y2011,
+              arrayCrimes[19].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(229, 175, 61, 0.9)"
+          },
+          {
+            label: arrayCrimes[20].country,
+            data: [
+              arrayCrimes[20].y2002,
+              arrayCrimes[20].y2003,
+              arrayCrimes[20].y2004,
+              arrayCrimes[20].y2005,
+              arrayCrimes[20].y2006,
+              arrayCrimes[20].y2007,
+              arrayCrimes[20].y2008,
+              arrayCrimes[20].y2009,
+              arrayCrimes[20].y2010,
+              arrayCrimes[20].y2011,
+              arrayCrimes[20].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(252, 15, 5, 0.9)"
+          },
+          {
+            label: arrayCrimes[21].country,
+            data: [
+              arrayCrimes[21].y2002,
+              arrayCrimes[21].y2003,
+              arrayCrimes[21].y2004,
+              arrayCrimes[21].y2005,
+              arrayCrimes[21].y2006,
+              arrayCrimes[21].y2007,
+              arrayCrimes[21].y2008,
+              arrayCrimes[21].y2009,
+              arrayCrimes[21].y2010,
+              arrayCrimes[21].y2011,
+              arrayCrimes[21].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(217, 217, 206, 1)"
+          },
+          {
+            label: arrayCrimes[22].country,
+            data: [
+              arrayCrimes[22].y2002,
+              arrayCrimes[22].y2003,
+              arrayCrimes[22].y2004,
+              arrayCrimes[22].y2005,
+              arrayCrimes[22].y2006,
+              arrayCrimes[22].y2007,
+              arrayCrimes[22].y2008,
+              arrayCrimes[22].y2009,
+              arrayCrimes[22].y2010,
+              arrayCrimes[22].y2011,
+              arrayCrimes[22].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(152, 134, 185, 0.9)"
+          },
+          {
+            label: arrayCrimes[23].country,
+            data: [
+              arrayCrimes[23].y2002,
+              arrayCrimes[23].y2003,
+              arrayCrimes[23].y2004,
+              arrayCrimes[23].y2005,
+              arrayCrimes[23].y2006,
+              arrayCrimes[23].y2007,
+              arrayCrimes[23].y2008,
+              arrayCrimes[23].y2009,
+              arrayCrimes[23].y2010,
+              arrayCrimes[23].y2011,
+              arrayCrimes[23].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(224, 115, 94, 0.8)"
+          },
+          {
+            label: arrayCrimes[24].country,
+            data: [
+              arrayCrimes[24].y2002,
+              arrayCrimes[24].y2003,
+              arrayCrimes[24].y2004,
+              arrayCrimes[24].y2005,
+              arrayCrimes[24].y2006,
+              arrayCrimes[24].y2007,
+              arrayCrimes[24].y2008,
+              arrayCrimes[24].y2009,
+              arrayCrimes[24].y2010,
+              arrayCrimes[24].y2011,
+              arrayCrimes[24].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(245, 226, 8, 0)"
+          },
+          {
+            label: arrayCrimes[25].country,
+            data: [
+              arrayCrimes[25].y2002,
+              arrayCrimes[25].y2003,
+              arrayCrimes[25].y2004,
+              arrayCrimes[25].y2005,
+              arrayCrimes[25].y2006,
+              arrayCrimes[25].y2007,
+              arrayCrimes[25].y2008,
+              arrayCrimes[25].y2009,
+              arrayCrimes[25].y2010,
+              arrayCrimes[25].y2011,
+              arrayCrimes[25].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(113, 246, 194, 0.8)"
+          },
+          {
+            label: arrayCrimes[26].country,
+            data: [
+              arrayCrimes[26].y2002,
+              arrayCrimes[26].y2003,
+              arrayCrimes[26].y2004,
+              arrayCrimes[26].y2005,
+              arrayCrimes[26].y2006,
+              arrayCrimes[26].y2007,
+              arrayCrimes[26].y2008,
+              arrayCrimes[26].y2009,
+              arrayCrimes[26].y2010,
+              arrayCrimes[26].y2011,
+              arrayCrimes[26].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(153, 179, 50, 0.2)"
+          },
+          {
+            label: arrayCrimes[27].country,
+            data: [
+              arrayCrimes[27].y2002,
+              arrayCrimes[27].y2003,
+              arrayCrimes[27].y2004,
+              arrayCrimes[27].y2005,
+              arrayCrimes[27].y2006,
+              arrayCrimes[27].y2007,
+              arrayCrimes[27].y2008,
+              arrayCrimes[27].y2009,
+              arrayCrimes[27].y2010,
+              arrayCrimes[27].y2011,
+              arrayCrimes[27].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"black"
+          },
+          {
+            label: arrayCrimes[28].country,
+            data: [
+              arrayCrimes[28].y2002,
+              arrayCrimes[28].y2003,
+              arrayCrimes[28].y2004,
+              arrayCrimes[28].y2005,
+              arrayCrimes[28].y2006,
+              arrayCrimes[28].y2007,
+              arrayCrimes[28].y2008,
+              arrayCrimes[28].y2009,
+              arrayCrimes[28].y2010,
+              arrayCrimes[28].y2011,
+              arrayCrimes[28].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(223, 149, 241, 0.9)"
+          },
+          {
+            label: arrayCrimes[29].country,
+            data: [
+              arrayCrimes[29].y2002,
+              arrayCrimes[29].y2003,
+              arrayCrimes[29].y2004,
+              arrayCrimes[29].y2005,
+              arrayCrimes[29].y2006,
+              arrayCrimes[29].y2007,
+              arrayCrimes[29].y2008,
+              arrayCrimes[29].y2009,
+              arrayCrimes[29].y2010,
+              arrayCrimes[29].y2011,
+              arrayCrimes[29].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(61, 102, 15, 0.9)"
+          },
+          {
+            label: arrayCrimes[30].country,
+            data: [
+              arrayCrimes[30].y2002,
+              arrayCrimes[30].y2003,
+              arrayCrimes[30].y2004,
+              arrayCrimes[30].y2005,
+              arrayCrimes[30].y2006,
+              arrayCrimes[30].y2007,
+              arrayCrimes[30].y2008,
+              arrayCrimes[30].y2009,
+              arrayCrimes[30].y2010,
+              arrayCrimes[30].y2011,
+              arrayCrimes[30].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(49, 13, 33, 0.9)"
+          },
+          {
+            label: arrayCrimes[31].country,
+            data: [
+              arrayCrimes[31].y2002,
+              arrayCrimes[31].y2003,
+              arrayCrimes[31].y2004,
+              arrayCrimes[31].y2005,
+              arrayCrimes[31].y2006,
+              arrayCrimes[31].y2007,
+              arrayCrimes[31].y2008,
+              arrayCrimes[31].y2009,
+              arrayCrimes[31].y2010,
+              arrayCrimes[31].y2011,
+              arrayCrimes[31].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(234, 119, 77, 0.8)"
+          },
+          {
+            label: arrayCrimes[32].country,
+            data: [
+              arrayCrimes[32].y2002,
+              arrayCrimes[32].y2003,
+              arrayCrimes[32].y2004,
+              arrayCrimes[32].y2005,
+              arrayCrimes[32].y2006,
+              arrayCrimes[32].y2007,
+              arrayCrimes[32].y2008,
+              arrayCrimes[32].y2009,
+              arrayCrimes[32].y2010,
+              arrayCrimes[32].y2011,
+              arrayCrimes[32].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(155, 226, 58, 1)"
+          },
+          {
+            label: arrayCrimes[33].country,
+            data: [
+              arrayCrimes[33].y2002,
+              arrayCrimes[33].y2003,
+              arrayCrimes[33].y2004,
+              arrayCrimes[33].y2005,
+              arrayCrimes[33].y2006,
+              arrayCrimes[33].y2007,
+              arrayCrimes[33].y2008,
+              arrayCrimes[33].y2009,
+              arrayCrimes[33].y2010,
+              arrayCrimes[33].y2011,
+              arrayCrimes[33].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(52, 168, 20, 1)"
+          },
+          {
+            label: arrayCrimes[34].country,
+            data: [
+              arrayCrimes[34].y2002,
+              arrayCrimes[34].y2003,
+              arrayCrimes[34].y2004,
+              arrayCrimes[34].y2005,
+              arrayCrimes[34].y2006,
+              arrayCrimes[34].y2007,
+              arrayCrimes[34].y2008,
+              arrayCrimes[34].y2009,
+              arrayCrimes[34].y2010,
+              arrayCrimes[34].y2011,
+              arrayCrimes[34].y2012,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(246, 199, 100, 0.8)"
+          },
+        ],
+      },
+      options: {
+        animations: {
+            tension: {
+              duration: 1000,
+              easing: 'linear',
+              from: 1,
+              to: 0,
+              loop: true
             }
-        }
-    }
-});
+          },
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
+};
 
+xhttp.open("GET", " crimes.json", true);
+xhttp.send();
