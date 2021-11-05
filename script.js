@@ -65,7 +65,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[1].y2011,
               arrayCrimes[1].y2012,
             ],
-            borderColor: "red",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(226, 57, 16, 0.1)"
           },
@@ -84,7 +84,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[2].y2011,
               arrayCrimes[2].y2012,
             ],
-            borderColor: "yellow",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(121, 208, 151, 0.1)"
           },
@@ -103,7 +103,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[3].y2011,
               arrayCrimes[3].y2012,
             ],
-            borderColor: "green",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(141, 31, 161, 0.9)"
           },
@@ -122,7 +122,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[4].y2011,
               arrayCrimes[4].y2012,
             ],
-            borderColor: "purple",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(206, 45, 113, 0.6)"
           },
@@ -141,7 +141,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[5].y2011,
               arrayCrimes[5].y2012,
             ],
-            borderColor: "aqua",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(14, 97, 249, 0.7)"
           },
@@ -160,7 +160,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[6].y2011,
               arrayCrimes[6].y2012,
             ],
-            borderColor: "orange",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(54, 45, 12, 0.4)"
           },
@@ -179,7 +179,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[7].y2011,
               arrayCrimes[7].y2012,
             ],
-            borderColor: "brown",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"rgba(46, 170, 82, 0.5)"
           },
@@ -198,7 +198,7 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[8].y2011,
               arrayCrimes[8].y2012,
             ],
-            borderColor: "gray",
+            borderColor: "black",
             borderWidth: 2,
             backgroundColor:"brgba(72, 27, 139, 0.9)"
           },
