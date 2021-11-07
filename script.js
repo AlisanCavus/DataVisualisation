@@ -11,7 +11,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     let arrayCrimes = JSON.parse(xhttp.responseText);
-    console.log(arrayCrimes[0]);
+    console.log(arrayCrimes);
 
     const ctx = $("#crimes");
     const myChart = new Chart(ctx, {
@@ -700,13 +700,7 @@ xhttp.onreadystatechange = function () {
       },
       options: {
         animations: {
-            tension: {
-              duration: 1000,
-              easing: 'linear',
-              from: 1,
-              to: 0,
-              loop: true
-            }
+            tension: 0,
           },
         scales: {
           y: {
@@ -720,3 +714,339 @@ xhttp.onreadystatechange = function () {
 
 xhttp.open("GET", " crimes.json", true);
 xhttp.send();
+
+
+var xhttp1 = new XMLHttpRequest();
+xhttp1.onreadystatechange = function() {  
+  if (this.readyState == 4 && this.status == 200) { 
+    let arrayHomicides = JSON.parse(xhttp1.responseText) ;
+    console.log(arrayHomicides);
+
+
+    const ctx1 = $("#homicides");
+    const myChart1 = new Chart(ctx1, {  
+      type: "line",
+      data: {
+        labels: [
+          "2007 -2009",
+          "2010 - 2012",
+        ],
+        datasets: [
+          {
+            label: arrayHomicides[0].c,
+            data: [
+              arrayHomicides[0].y7,
+              arrayHomicides[0].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(39, 140, 201, 0.7)"
+          },
+          {
+            label: arrayHomicides[1].c,
+            data: [
+              arrayHomicides[1].y7,
+              arrayHomicides[1].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(226, 57, 16, 0.1)"
+          },
+          {
+            label: arrayHomicides[2].c,
+            data: [
+              arrayHomicides[2].y7,
+              arrayHomicides[2].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(121, 208, 151, 0.1)"
+          },
+          {
+            label: arrayHomicides[3].c,
+            data: [
+              arrayHomicides[3].y7,
+              arrayHomicides[3].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(141, 31, 161, 0.9)"
+          },
+          {
+            label: arrayHomicides[4].c,
+            data: [
+              arrayHomicides[4].y7,
+              arrayHomicides[4].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(206, 45, 113, 0.6)"
+          },
+          {
+            label: arrayHomicides[5].c,
+            data: [
+              arrayHomicides[5].y7,
+              arrayHomicides[5].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(14, 97, 249, 0.7)"
+          },
+          {
+            label: arrayHomicides[6].c,
+            data: [
+              arrayHomicides[6].y7,
+              arrayHomicides[6].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(54, 45, 12, 0.4)"
+          },
+          {
+            label: arrayHomicides[7].c,
+            data: [
+              arrayHomicides[7].y7,
+              arrayHomicides[7].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(46, 170, 82, 0.5)"
+          },
+          {
+            label: arrayHomicides[8].c,
+            data: [
+              arrayHomicides[8].y7,
+              arrayHomicides[8].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"brgba(72, 27, 139, 0.9)"
+          },
+          {
+            label: arrayHomicides[9].c,
+            data: [
+              arrayHomicides[9].y7,
+              arrayHomicides[9].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(175, 94, 55, 0.9)"
+          },
+          {
+            label: arrayHomicides[10].c,
+            data: [
+              arrayHomicides[10].y7,
+              arrayHomicides[10].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(2, 122, 142, 0.2)"
+          },
+          {
+            label: arrayHomicides[11].c,
+            data: [
+              arrayHomicides[11].y7,
+              arrayHomicides[11].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(125, 144, 74, 1)"
+          },
+          {
+            label: arrayHomicides[12].c,
+            data: [
+              arrayHomicides[12].y7,
+              arrayHomicides[12].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(250, 211, 219, 1)"
+          },
+          {
+            label: arrayHomicides[13].c,
+            data: [
+              arrayHomicides[13].y7,
+              arrayHomicides[13].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(114, 65, 73, 0.5)"
+          },
+          {
+            label: arrayHomicides[14].c,
+            data: [
+              arrayHomicides[14].y7,
+              arrayHomicides[14].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(158, 171, 93, 0.7)"
+          },
+          {
+            label: arrayHomicides[15].c,
+            data: [
+              arrayHomicides[15].y7,
+              arrayHomicides[15].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(110, 214, 74, 0.6)"
+          },
+          {
+            label: arrayHomicides[16].c,
+            data: [
+              arrayHomicides[16].y7,
+              arrayHomicides[16].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(160, 40, 72, 1)"
+          },
+          {
+            label: arrayHomicides[17].c,
+            data: [
+              arrayHomicides[17].y7,
+              arrayHomicides[17].y10,,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(189, 57, 187, 0.2)"
+          },
+          {
+            label: arrayHomicides[18].c,
+            data: [
+              arrayHomicides[18].y7,
+              arrayHomicides[18].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(34, 225, 62, 0.9)"
+          },
+          {
+            label: arrayHomicides[19].c,
+            data: [
+              arrayHomicides[19].y7,
+              arrayHomicides[19].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(229, 175, 61, 0.9)"
+          },
+          {
+            label: arrayHomicides[20].c,
+            data: [
+              arrayHomicides[20].y7,
+              arrayHomicides[20].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(252, 15, 5, 0.9)"
+          },
+          {
+            label: arrayHomicides[21].c,
+            data: [
+              arrayHomicides[21].y7,
+              arrayHomicides[21].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(217, 217, 206, 1)"
+          },
+          {
+            label: arrayHomicides[22].c,
+            data: [
+              arrayHomicides[22].y7,
+              arrayHomicides[22].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(152, 134, 185, 0.9)"
+          },
+          {
+            label: arrayHomicides[23].c,
+            data: [
+              arrayHomicides[23].y7,
+              arrayHomicides[23].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(224, 115, 94, 0.8)"
+          },
+          {
+            label: arrayHomicides[24].c,
+            data: [
+              arrayHomicides[24].y7,
+              arrayHomicides[24].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(245, 226, 8, 0)"
+          },
+          {
+            label: arrayHomicides[25].c,
+            data: [
+              arrayHomicides[25].y7,
+              arrayHomicides[25].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(113, 246, 194, 0.8)"
+          },
+          {
+            label: arrayHomicides[26].c,
+            data: [
+              arrayHomicides[26].y7,
+              arrayHomicides[26].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(153, 179, 50, 0.2)"
+          },
+          {
+            label: arrayHomicides[27].c,
+            data: [
+              arrayHomicides[27].y7,
+              arrayHomicides[27].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"black"
+          },
+          {
+            label: arrayHomicides[28].c,
+            data: [
+              arrayHomicides[28].y7,
+              arrayHomicides[28].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(223, 149, 241, 0.9)"
+          },
+          {
+            label: arrayHomicides[29].c,
+            data: [
+              arrayHomicides[29].y7,
+              arrayHomicides[29].y10,
+            ],
+            borderColor: "black",
+            borderWidth: 2,
+            backgroundColor:"rgba(61, 102, 15, 0.9)"
+          },
+        ],
+      },
+      options: {
+        animations: {
+            tension: 0,
+          },
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    })
+  }
+};
+
+xhttp1.open("GET", "homicides.json", true);
+xhttp1.send();
