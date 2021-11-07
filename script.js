@@ -47,7 +47,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[0].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(39, 140, 201, 0.7)"
           },
           {
@@ -66,7 +67,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[1].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(226, 57, 16, 0.1)"
           },
           {
@@ -85,7 +87,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[2].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(121, 208, 151, 0.1)"
           },
           {
@@ -104,7 +107,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[3].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(141, 31, 161, 0.9)"
           },
           {
@@ -123,7 +127,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[4].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(206, 45, 113, 0.6)"
           },
           {
@@ -142,7 +147,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[5].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(14, 97, 249, 0.7)"
           },
           {
@@ -161,7 +167,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[6].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(54, 45, 12, 0.4)"
           },
           {
@@ -180,7 +187,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[7].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(46, 170, 82, 0.5)"
           },
           {
@@ -199,7 +207,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[8].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"brgba(72, 27, 139, 0.9)"
           },
           {
@@ -218,7 +227,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[9].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(175, 94, 55, 0.9)"
           },
           {
@@ -237,7 +247,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[10].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(2, 122, 142, 0.2)"
           },
           {
@@ -256,7 +267,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[11].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(125, 144, 74, 1)"
           },
           {
@@ -275,7 +287,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[12].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(250, 211, 219, 1)"
           },
           {
@@ -294,7 +307,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[13].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(114, 65, 73, 0.5)"
           },
           {
@@ -313,7 +327,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[14].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(158, 171, 93, 0.7)"
           },
           {
@@ -332,7 +347,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[15].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(110, 214, 74, 0.6)"
           },
           {
@@ -351,7 +367,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[16].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(160, 40, 72, 1)"
           },
           {
@@ -370,7 +387,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[17].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(189, 57, 187, 0.2)"
           },
           {
@@ -389,7 +407,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[18].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(34, 225, 62, 0.9)"
           },
           {
@@ -408,7 +427,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[19].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(229, 175, 61, 0.9)"
           },
           {
@@ -427,7 +447,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[20].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(252, 15, 5, 0.9)"
           },
           {
@@ -446,7 +467,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[21].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(217, 217, 206, 1)"
           },
           {
@@ -465,7 +487,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[22].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(152, 134, 185, 0.9)"
           },
           {
@@ -484,7 +507,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[23].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(224, 115, 94, 0.8)"
           },
           {
@@ -503,7 +527,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[24].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(245, 226, 8, 0)"
           },
           {
@@ -522,7 +547,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[25].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(113, 246, 194, 0.8)"
           },
           {
@@ -541,7 +567,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[26].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(153, 179, 50, 0.2)"
           },
           {
@@ -560,7 +587,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[27].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"black"
           },
           {
@@ -579,7 +607,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[28].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(223, 149, 241, 0.9)"
           },
           {
@@ -598,7 +627,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[29].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(61, 102, 15, 0.9)"
           },
           {
@@ -617,7 +647,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[30].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(49, 13, 33, 0.9)"
           },
           {
@@ -636,7 +667,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[31].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(234, 119, 77, 0.8)"
           },
           {
@@ -655,7 +687,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[32].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(155, 226, 58, 1)"
           },
           {
@@ -674,7 +707,8 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[33].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(52, 168, 20, 1)"
           },
           {
@@ -693,14 +727,15 @@ xhttp.onreadystatechange = function () {
               arrayCrimes[34].y2012,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(246, 199, 100, 0.8)"
           },
         ],
       },
       options: {
         animations: {
-            tension: 0,
+            tension: 1,
           },
         scales: {
           y: {
@@ -739,7 +774,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[0].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(39, 140, 201, 0.7)"
           },
           {
@@ -749,7 +785,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[1].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(226, 57, 16, 0.1)"
           },
           {
@@ -759,7 +796,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[2].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(121, 208, 151, 0.1)"
           },
           {
@@ -769,7 +807,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[3].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(141, 31, 161, 0.9)"
           },
           {
@@ -779,7 +818,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[4].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(206, 45, 113, 0.6)"
           },
           {
@@ -789,7 +829,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[5].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(14, 97, 249, 0.7)"
           },
           {
@@ -799,7 +840,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[6].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(54, 45, 12, 0.4)"
           },
           {
@@ -809,7 +851,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[7].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(46, 170, 82, 0.5)"
           },
           {
@@ -819,7 +862,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[8].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"brgba(72, 27, 139, 0.9)"
           },
           {
@@ -829,7 +873,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[9].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(175, 94, 55, 0.9)"
           },
           {
@@ -839,7 +884,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[10].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(2, 122, 142, 0.2)"
           },
           {
@@ -849,7 +895,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[11].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(125, 144, 74, 1)"
           },
           {
@@ -859,7 +906,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[12].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(250, 211, 219, 1)"
           },
           {
@@ -869,7 +917,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[13].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(114, 65, 73, 0.5)"
           },
           {
@@ -879,7 +928,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[14].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(158, 171, 93, 0.7)"
           },
           {
@@ -889,7 +939,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[15].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(110, 214, 74, 0.6)"
           },
           {
@@ -899,7 +950,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[16].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(160, 40, 72, 1)"
           },
           {
@@ -909,7 +961,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[17].y10,,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(189, 57, 187, 0.2)"
           },
           {
@@ -919,7 +972,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[18].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(34, 225, 62, 0.9)"
           },
           {
@@ -929,7 +983,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[19].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(229, 175, 61, 0.9)"
           },
           {
@@ -939,7 +994,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[20].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(252, 15, 5, 0.9)"
           },
           {
@@ -949,7 +1005,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[21].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(217, 217, 206, 1)"
           },
           {
@@ -959,7 +1016,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[22].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: false,
             backgroundColor:"rgba(152, 134, 185, 0.9)"
           },
           {
@@ -969,7 +1027,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[23].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(224, 115, 94, 0.8)"
           },
           {
@@ -979,7 +1038,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[24].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(245, 226, 8, 0)"
           },
           {
@@ -989,7 +1049,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[25].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(113, 246, 194, 0.8)"
           },
           {
@@ -999,7 +1060,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[26].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(153, 179, 50, 0.2)"
           },
           {
@@ -1009,7 +1071,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[27].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"black"
           },
           {
@@ -1019,7 +1082,8 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[28].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(223, 149, 241, 0.9)"
           },
           {
@@ -1029,14 +1093,15 @@ xhttp1.onreadystatechange = function() {
               arrayHomicides[29].y10,
             ],
             borderColor: "black",
-            borderWidth: 2,
+            borderWidth: 1,
+            hidden: true,
             backgroundColor:"rgba(61, 102, 15, 0.9)"
           },
         ],
       },
       options: {
         animations: {
-            tension: 0,
+            tension: 1,
           },
         scales: {
           y: {
