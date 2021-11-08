@@ -3,7 +3,6 @@ let tableCrimes = $("#table1");
 let tableHomicides = $("#table2");
 let newCanvas1 = $("<canvas/>", { id: "crimes", class: "canv" });
 let newCanvas2 = $("<canvas/>", { id: "homicides", class: "canv" });
-// console.log("test1");
 newCanvas1.insertBefore(tableCrimes);
 newCanvas2.insertBefore(tableHomicides);
 
@@ -1115,3 +1114,9 @@ xhttp1.onreadystatechange = function() {
 
 xhttp1.open("GET", "homicides.json", true);
 xhttp1.send();
+
+
+let beforeBody = $('#bodyContent');
+let newCanvas3 = $('<canvas/>', { id:"livedata", class:"canv"});
+newCanvas3.insertBefore(beforeBody);
+
