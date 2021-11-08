@@ -1120,3 +1120,5 @@ let beforeBody = $('#bodyContent');
 let newCanvas3 = $('<canvas/>', { id:"livedata", class:"canv"});
 newCanvas3.insertBefore(beforeBody);
 
+const xhttp2 = new XMLHttpRequest();
+
