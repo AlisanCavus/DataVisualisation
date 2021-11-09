@@ -12,8 +12,8 @@ xhttp.onreadystatechange = function () {
     let arrayCrimes = JSON.parse(xhttp.responseText);
     console.log(arrayCrimes);
 
-    const ctx = $("#crimes");
-    const myChart = new Chart(ctx, {
+    const ctx1 = $("#crimes");
+    const myChart1 = new Chart(ctx1, {
       type: "line",
       data: {
         labels: [
@@ -757,8 +757,8 @@ xhttp1.onreadystatechange = function() {
     console.log(arrayHomicides);
 
 
-    const ctx1 = $("#homicides");
-    const myChart1 = new Chart(ctx1, {  
+    const ctx2 = $("#homicides");
+    const myChart2 = new Chart(ctx2, {  
       type: "line",
       data: {
         labels: [
@@ -1116,9 +1116,63 @@ xhttp1.open("GET", "homicides.json", true);
 xhttp1.send();
 
 
+
 let beforeBody = $('#bodyContent');
 let newCanvas3 = $('<canvas/>', { id:"livedata", class:"canv"});
 newCanvas3.insertBefore(beforeBody);
 
-const xhttp2 = new XMLHttpRequest();
+
+	var dataPoints = [];
+  function chartIt() {
+    
+	$.getJSON("https://canvasjs.com/services/data/datapoints.php", function(data) {  
+		$.each(data, function(key, value){
+			dataPoints.push({x: value[1], y: parseInt(value[1])});
+		});
+  
+		var ctx3 = document.getElementById('livedata').getContext("2d");
+    var myChart3 = new Chart(ctx3, {
+    type: 'line',
+    data: {
+        labels: dataPoints,
+        datasets: [{
+            yAxisID: 'yAxis',
+            label: 'Live Data From External Source ',
+            data: dataPoints,
+            backgroundColor: ['rgba(255, 99, 132, 0.2)',],
+            borderColor: ['rgba(255, 99, 132, 1)',],
+            borderWidth: 1
+        }]
+    },
+  });
+		myChart3.render();
+		updateChart();
+	});
+
+
+
+
+  function updateChart() {
+	$.getJSON("https://canvasjs.com/services/data/datapoints.php" + (dataPoints.length + 1) + (dataPoints[dataPoints.length - 1].y) , function(data) {
+		$.each(data, function(key, value) {
+			dataPoints.push({
+			x: parseInt(value[0]),
+			y: parseInt(value[1])
+			});
+		});
+		myChart3.render();
+		setTimeout(function(){updateChart()}, 1000);
+	});
+	};
+
+   chartIt()
+  };
+
+ 
+
+
+
+
+
+
 
