@@ -1122,57 +1122,39 @@ let newCanvas3 = $('<canvas/>', { id:"livedata", class:"canv"});
 newCanvas3.insertBefore(beforeBody);
 
 
-	var dataPoints = [];
-  function chartIt() {
-    
-	$.getJSON("https://canvasjs.com/services/data/datapoints.php", function(data) {  
-		$.each(data, function(key, value){
-			dataPoints.push({x: value[1], y: parseInt(value[1])});
-		});
-  
-		var ctx3 = document.getElementById('livedata').getContext("2d");
-    var myChart3 = new Chart(ctx3, {
+const dataPoints = [];
+
+fetch('https://canvasjs.com/services/data/datapoints.php')
+  .then(blob => blob.json())
+  .then(data => dataPoints.push(...data));
+
+console.log(dataPoints);
+
+
+
+
+const ctx = document.getElementById('livedata').getContext('2d');
+const myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: dataPoints,
         datasets: [{
-            yAxisID: 'yAxis',
-            label: 'Live Data From External Source ',
+            label: 'Live Chart',
             data: dataPoints,
-            backgroundColor: ['rgba(255, 99, 132, 0.2)',],
-            borderColor: ['rgba(255, 99, 132, 1)',],
+            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+            borderColor: ['rgba(255, 99, 132, 1)'],
             borderWidth: 1
         }]
     },
-  });
-		myChart3.render();
-		updateChart();
-	});
-
-
-
-
-  function updateChart() {
-	$.getJSON("https://canvasjs.com/services/data/datapoints.php" + (dataPoints.length + 1) + (dataPoints[dataPoints.length - 1].y) , function(data) {
-		$.each(data, function(key, value) {
-			dataPoints.push({
-			x: parseInt(value[0]),
-			y: parseInt(value[1])
-			});
-		});
-		myChart3.render();
-		setTimeout(function(){updateChart()}, 1000);
-	});
-	};
-
-   chartIt()
-  };
-
- 
-
-
-
-
-
-
+    options: {
+        interaction: {
+            mode: 'dataset'
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
 
