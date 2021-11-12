@@ -1122,13 +1122,18 @@ let newCanvas3 = $('<canvas/>', { id:"livedata", class:"canv"});
 newCanvas3.insertBefore(beforeBody);
 
 
-const dataPoints = [];
+var dataPoints = [];
 
 fetch('https://canvasjs.com/services/data/datapoints.php')
   .then(blob => blob.json())
   .then(data => dataPoints.push(...data));
 
 console.log(dataPoints);
+const dat = dataPoints.entries
+console.log(dat);
+
+var newJson = new Object(dataPoints);
+console.log(newJson);
 
 
 
