@@ -1124,16 +1124,37 @@ newCanvas3.insertBefore(beforeBody);
 
 var dataPoints = [];
 
-fetch('https://canvasjs.com/services/data/datapoints.php')
-  .then(blob => blob.json())
-  .then(data => dataPoints.push(...data));
+// fetch('https://canvasjs.com/services/data/datapoints.php')
+//   .then(blob => blob.json())
+//   .then(data => dataPoints.push(...data));
 
-console.log(dataPoints);
-const dat = dataPoints.entries
-console.log(dat);
+//   var datdat = JSON.stringify(dataPoints);
 
-var newJson = new Object(dataPoints);
-console.log(newJson);
+
+//   console.table(datdat);
+
+
+$.ajax({  
+  url: 'https://canvasjs.com/services/data/datapoints.php',
+  method: 'GET',
+  success: function(dataPoints) { 
+    console.log(dataPoints);
+  },
+  error: function(err) {  
+    console.log(err);
+  }
+});
+
+
+for(let i = 0; i < dataPoints.length; i++) {  
+  for(let j = 0; j < dataPoints[i].length; j++) { 
+    
+  }
+}
+
+
+
+
 
 
 
@@ -1142,10 +1163,10 @@ const ctx = document.getElementById('livedata').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: dataPoints,
+        labels: [1, 2, 3, 4],
         datasets: [{
             label: 'Live Chart',
-            data: dataPoints,
+            data: [1, 2, 3, 4],
             backgroundColor: ['rgba(255, 99, 132, 0.2)'],
             borderColor: ['rgba(255, 99, 132, 1)'],
             borderWidth: 1
